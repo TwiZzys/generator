@@ -4,7 +4,7 @@ window.onload = function () {
         fade: true,
         prevArrow: '<button class="slick-arrow slick-arrow-left"><img src="images/left-arrow.svg" alt="left arrow"></button> ',
         nextArrow: '<button class="slick-arrow slick-arrow-right"><img src="images/right-arrow.svg" alt="right arrow" ></button>',
-        draggable: false,
+        draggable: false
     });
 
     //настройка випадающого списка
