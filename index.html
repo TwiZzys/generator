@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-top">
+          <a class="logo" href="index.html">
+            <img class="logo-img" src="images/logo.svg" alt="logo">
+          </a>
+          <nav class="menu">
+            <button class="menu-btn">
+              <span></span>
+            </button>
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a class="menu-link" href="#editor-text">
+                  Генератор тексту
+                </a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#editor-image">
+                  генератор картинок
+                </a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#editor-figure">
+                  Генератор фігур
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-content">
+          <h1 class="header-title">
+            CSS Generator
+            <span class="header-subtitle">
+              ваш надійний помічник у генеруванні стилів
+            </span>
+          </h1>
+        </div>
+        <a class="header-btn" href="#editor-text">
+          СПРОБУВАТИ!
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="editor" id="editor-text">
+      <div class="container">
+        <h2 class="title">
+          Генератор тексту
+          <span class="subtitle">
+            Редактуйте та створюйте власний стиль для свого тексту
+          </span>
+        </h2>
+        <div class="editor-inner">
+          <textarea class="editor-textarea" placeholder="Введіть ваш текст..."></textarea>
+          <div class="filters">
+            <div class="filters-inner">
+              <div class="filter">
+                <h4 class="filter-title">
+                  виберіть text-align
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input" type="radio" name="text-align" data-def checked>
+                    <div class="filter-radio">
+                      <span>
+                        Left
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filter-label">
+                    <input class="filter-input" type="radio" name="text-align">
+                    <div class="filter-radio">
+                      <span>
+                        right
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filter-label">
+                    <input class="filter-input" type="radio" name="text-align">
+                    <div class="filter-radio">
+                      <span>
+                        center
+                      </span>
+                    </div>
+                  </label>
+                </form>
+              </div>
+              <div class="filter">
+                <h4 class="filter-title">
+                  виберіть font-style
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input" type="radio" name="font-style" data-def checked>
+                    <div class="filter-radio">
+                      <span>
+                        normal
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filter-label">
+                    <input class="filter-input" type="radio" name="font-style">
+                    <div class="filter-radio">
+                      <span>
+                        italic
+                      </span>
+                    </div>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть font-size
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="10" max="200" value="15" name="font-size">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть line-height
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="10" max="200" value="15" name="line-height">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter select-filter">
+                <h4 class="filter-title">
+                  виберіть font-family
+                </h4>
+                <form class="filter-form" action="#">
+                  <div class="filter-select" id="font-family">
+                    <div class="filter-select-header">
+                      <span class="filter-select-current">RobotoCondensed</span>
+                    </div>
+                    <div class="filter-select-body">
+                      <div class="filter-select-item">
+                        RobotoCondensed
+                      </div>
+                      <div class="filter-select-item">
+                        Trocchi
+                      </div>
+                      <div class="filter-select-item">
+                        RubikGlitch
+                      </div>
+                      <div class="filter-select-item">
+                        sans-serif
+                      </div>
+                      <div class="filter-select-item">
+                        serif
+                      </div>
+                      <div class="filter-select-item">
+                        cursive
+                      </div>
+                      <div class="filter-select-item">
+                        system-ui
+                      </div>
+                      <div class="filter-select-item">
+                        monospace
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="filter filter-color">
+                <h4 class="filter-title">
+                  виберіть color
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-color" type="color" value="#2190BE" name="color">
+                  </label>
+                </form>
+              </div>
+              <div class="filter select-filter">
+                <h4 class="filter-title">
+                  виберіть text-decoration
+                </h4>
+                <form class="filter-form" action="#">
+                  <div class="filter-select" id="text-decoration">
+                    <div class="filter-select-header">
+                      <span class="filter-select-current">none</span>
+                    </div>
+                    <div class="filter-select-body">
+                      <div class="filter-select-item">none</div>
+                      <div class="filter-select-item">underline</div>
+                      <div class="filter-select-item">overline</div>
+                      <div class="filter-select-item">line-through</div>
+                      <div class="filter-select-item">underline overline</div>
+                      <div class="filter-select-item">underline line-through</div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть font-weight
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="100" max="900" value="400" step="100"
+                      name="font-weight">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter select-filter">
+                <h4 class="filter-title">
+                  виберіть text-decoration-style
+                </h4>
+                <form class="filter-form" action="#">
+                  <div class="filter-select" id="text-decoration-style">
+                    <div class="filter-select-header">
+                      <span class="filter-select-current">none</span>
+                    </div>
+                    <div class="filter-select-body">
+                      <div class="filter-select-item">none</div>
+                      <div class="filter-select-item">solid</div>
+                      <div class="filter-select-item">double</div>
+                      <div class="filter-select-item">dotted</div>
+                      <div class="filter-select-item">dashed</div>
+                      <div class="filter-select-item">wavy</div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть letter-spacing
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="1" max="200" value="1" name="letter-spacing">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть text-decoration-thickness
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="10" value="0"
+                      name="text-decoration-thickness">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть word-spacing
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="1" max="200" value="1" name="word-spacing">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-color">
+                <h4 class="filter-title">
+                  виберіть text-decoration-color
+                </h4>
+                <form class="filter-form" action="#">
+                  <label>
+                    <input class="filter-input-color" type="color" value="#2190BE" name="text-decoration-color">
+                  </label>
+                </form>
+              </div>
+              <div class="filters-btns">
+                <button class="btn btn-submit">ЗГЕНЕРУВАТИ</button>
+                <button class="btn btn-reset">ОЧИСТИТИ</button>
+              </div>
+            </div>
+            <div class="filters-slider-item">
+              <div class="filters-inner">
+                <textarea class="editor-textarea editor-textarea-code" placeholder="тут буде код для вставки в html" title="Нажміть на текст, щоб скопіювати" readonly></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="editor" id="editor-image">
+      <div class="container">
+        <h2 class="title">
+          Генератор картинок
+          <span class="subtitle">
+            Додайте яскравості для ваших фото
+          </span>
+        </h2>
+        <div class="editor-inner">
+          <div class="editor-textarea editor-image-box">
+            <img class="editor-image" src="" alt="">
+            <input class="editor-image-input" type="file">
+            <button class="editor-image-btn">
+              <img src="images/add-icon.svg" alt="">
+            </button>
+          </div>
+          <div class="filters">
+            <div class="filters-inner">
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть hue-rotate
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="360" value="0" name="hue-rotate">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть opacity
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="100" value="100" name="opacity" data-img>
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть contrast
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="200" value="100" name="contrast" data-img>
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть invert
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="100" value="0" name="invert">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть brightness
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="200" value="100" name="brightness" data-img>
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть grayscale
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="100" value="0" name="grayscale">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть blur
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="10" value="0" name="blur">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть sepia
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="100" value="0" name="sepia">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть saturate
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="200" value="100" name="saturate" data-img>
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filters-btns">
+                <button class="btn btn-submit">ЗГЕНЕРУВАТИ</button>
+                <button class="btn btn-reset">ОЧИСТИТИ</button>
+              </div>
+            </div>
+            <div class="filters-slider-item">
+              <div class="filters-inner">
+                <textarea class="editor-textarea editor-textarea-code" placeholder="тут буде код для вставки в html" title="Нажміть на текст, щоб скопіювати" readonly></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="editor" id="editor-figure">
+      <div class="container">
+        <h2 class="title">
+          Генератор фігур
+          <span class="subtitle">
+            Створюйте свої унікальні фігури
+          </span>
+        </h2>
+        <div class="editor-inner">
+          <div class="editor-textarea editor-figure-box">
+            <div class="editor-figure"></div>
+          </div>
+          <div class="filters">
+            <div class="filters-inner">
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть width
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="10" max="700" value="100" name="width">
+                    <p class=" filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть height
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="10" max="700" value="100" name="height">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-color">
+                <h4 class="filter-title">
+                  виберіть background
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-color" type="color" value="#ffffff" name="background">
+                  </label>
+                </form>
+              </div>
+              <div class="filter select-filter">
+                <h4 class="filter-title">
+                  виберіть border-style
+                </h4>
+                <form class="filter-form" action="#">
+                  <div class="filter-select" id="border-style">
+                    <div class="filter-select-header">
+                      <span class="filter-select-current">none</span>
+                    </div>
+                    <div class="filter-select-body">
+                      <div class="filter-select-item">none</div>
+                      <div class="filter-select-item">solid</div>
+                      <div class="filter-select-item">dotted</div>
+                      <div class="filter-select-item">dashed</div>
+                      <div class="filter-select-item">double</div>
+                      <div class="filter-select-item">groove</div>
+                      <div class="filter-select-item">ridge</div>
+                      <div class="filter-select-item">inset</div>
+                      <div class="filter-select-item">outset</div>
+                      <div class="filter-select-item">hidden</div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть border-width
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="25" value="1" name="border-width">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-color">
+                <h4 class="filter-title">
+                  виберіть border-color
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-color" type="color" value="#ffffff" name="border-color">
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть border-radius(left top)
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="700" value="0" name="border-radius-lt">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть border-radius(right top)
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="700" value="0" name="border-radius-rt">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть border-radius(left bottom)
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="700" value="0" name="border-radius-lb">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filter filter-range">
+                <h4 class="filter-title">
+                  виберіть border-radius(right bottom)
+                </h4>
+                <form class="filter-form" action="#">
+                  <label class="filter-label">
+                    <input class="filter-input-range" type="range" min="0" max="700" value="0" name="border-radius-rb">
+                    <p class="filter-value"></p>
+                  </label>
+                </form>
+              </div>
+              <div class="filters-btns">
+                <button class="btn btn-submit">ЗГЕНЕРУВАТИ</button>
+                <button class="btn btn-reset">ОЧИСТИТИ</button>
+              </div>
+            </div>
+            <div class="filters-slider-item">
+              <div class="filters-inner">
+                <textarea class="editor-textarea editor-textarea-code" placeholder="тут буде код для вставки в html" title="Нажміть на текст, щоб скопіювати" readonly></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <nav class="footer-menu">
+          <ul class="footer-menu-list">
+            <li class="footer-menu-item">
+              <a class="footer-menu-link" href="#editor-text">
+                Генератор тексту
+              </a>
+            </li>
+            <li class="footer-menu-item">
+              <a class="footer-menu-link" href="#editor-image">
+                генератор картинок
+              </a>
+            </li>
+            <li class="footer-menu-item">
+              <a class="footer-menu-link" href="#editor-figure">
+                Генератор фігур
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <p class="footer-copy">
+          всі права захищені
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/editor-text.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
