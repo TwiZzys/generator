@@ -56,12 +56,18 @@ body {
 .header-top.fixed {
     position: fixed;
     width: 100%;
-    max-width: 1600px;
     transition: all .5s linear;
     top: 0;
+    left: 0;
+    right: 0;
     background: #0F425A;
     z-index: 20;
-    padding-right: 15px;
+    justify-content: center;
+}
+
+.fixed .logo {
+    margin-right: 10%;
+    padding-left: 10px;
 }
 
 .menu-btn {
@@ -125,6 +131,7 @@ body {
     padding: 55px 0;
     margin-bottom: 100px;
 }
+
 .editor-image {
     max-width: 100%;
     margin: 0 0 20px;
@@ -175,7 +182,7 @@ body {
     min-width: 600px;
 }
 
-.clipboard-text{
+.clipboard-text {
     position: fixed;
     padding: 10px;
     background: #2190BE;
